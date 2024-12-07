@@ -1,0 +1,19 @@
+<h1>Listado de Mascotas</h1>
+<a href="/agregar/">Registrar Mascota</a>
+<a href="/buscar/">Buscar Mascotas</a>
+<table>
+   <tr>
+       <th>Nombre</th>
+       <th>Tipo</th>
+       <th>Edad</th>
+       <th>Dueño</th>
+   </tr>
+   {% for mascota in mascotas %}
+   <tr>
+       <td>{{ mascota.nombre }}</td>
+       <td>{{ mascota.tipo }}</td>
+       <td>{{ mascota.edad }}</td>
+       <td>{{ mascota.dueño_email }}</td>
+   </tr>
+   {% endfor %}
+</table>

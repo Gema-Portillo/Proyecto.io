@@ -1,0 +1,14 @@
+<h1>Buscar Mascotas</h1>
+<form method="get">
+   <input type="text" name="q" placeholder="Buscar por nombre">
+   <button type="submit">Buscar</button>
+</form>
+{% if mascotas %}
+<ul>
+   {% for mascota in mascotas %}
+   <li>{{ mascota.nombre }} - {{ mascota.tipo }} - {{ mascota.edad }}</li>
+   {% endfor %}
+</ul>
+{% else %}
+<p>No se encontraron resultados.</p>
+{% endif %}
